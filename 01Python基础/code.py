@@ -27,4 +27,26 @@ def AssignTest():
     Name,Age = "Lin","ok"
     print(Name,":",Age)
 
-valueType()
+def StringTest():
+    Say = "Hello World" + (" I love you" * 3)
+    Path = r"C:\Windows\info.txt"
+    print(Say)
+    print(Path)
+
+    SubStr = Path[3:-9]
+    print(SubStr)
+
+def ListTest():
+    Student = ["Kin",31,"List"]
+    Student += ["Lin",21]
+    print(Student)
+
+def TupleTest():
+    
+   Student = ("Kin",31,"Tuple")
+   Student += ("Lin",21)
+
+   print(Student)
+
+
+TupleTest()
