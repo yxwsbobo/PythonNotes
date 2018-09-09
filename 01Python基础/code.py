@@ -49,4 +49,21 @@ def TupleTest():
    print(Student)
 
 
-TupleTest()
+def DictionTest():
+    Maps = {"Name":"Kin","Age":32,"Score":85}
+    if("Name" in Maps):
+        print("Maps have Key Name")
+    else:
+        print("Maps haven't Key Name")
+    
+    del Maps["Name"]
+
+    if("Name" in Maps):
+        print("Maps have Key Name")
+    else:
+        print("Maps haven't Key Name")
+
+    print(Maps.keys())
+    print(Maps.values())
+
+DictionTest()
