@@ -16,7 +16,15 @@ def valueType():
     var = "hello"
     print(var, " type :", type(var))
 
+    print(10/3)
+    print(10//3)
+    print(2 ** 10)
+
     
+def AssignTest():
+    Name,Age = "Kin",32
+    print(Name,":",Age)
+    Name,Age = "Lin","ok"
+    print(Name,":",Age)
+
 valueType()
-
-

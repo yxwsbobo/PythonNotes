@@ -60,3 +60,14 @@ print(var, " type :", type(var))
 * 使用 ''' 或 ''' 包裹 定义多行字符串
 * 支持转义符 \, 通过加前缀 r/R 禁用转义 R"原样输出\n不会换行"
 * 常量字符串可自动连接 "this " "is " "a string" == "this is a string"
+
+> 赋值
+* 可同时对多个变量进行赋值
+```python
+    Name,Age = "Kin",32
+    Name,Age = "Lin","ok"
+
+    # Name,Age = "Kin",32,1  #Error
+    # Name,Age = "Kin"  #Error
+
+```
