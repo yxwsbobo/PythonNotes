@@ -190,15 +190,15 @@ ch = Path[-1] #>> ch == m
 成员函数列表:
 函数名|说明
 ---|---
-.clear()    |   清空
-.copy()     |   浅复制
-.fromkeys(seq) |   以seq为键创建字典,值为默认值
-.get(key,value) |   返回指定键的值,不存在则返回 value
-.setdefault(key,value)  | 如果键不存在则创建键并赋值value (*如果存在说明都不做?*)
-.items()    |   返回一个List,元素为键值Tuple
-.keys()     |   返回键组成的List
-.values()   |   返回值组成的List
-.update(dict2)  |   使用dict2更新字典 (*是替换还是增加?*)
+clear()    |   清空
+copy()     |   浅复制
+fromkeys(seq) |   以seq为键创建字典,值为默认值
+get(key,value) |   返回指定键的值,不存在则返回 value
+setdefault(key,value)  | 如果键不存在则创建键并赋值value (*如果存在说明都不做?*)
+items()    |   返回一个List,元素为键值Tuple
+keys()     |   返回键组成的List
+values()   |   返回值组成的List
+update(dict2)  |   使用dict2更新字典 (*是替换还是增加?*)
 
 ```python
 >>> dic = {}  # 创建空字典
