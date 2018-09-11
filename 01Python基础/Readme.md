@@ -187,10 +187,11 @@ ch = Path[-1] #>> ch == m
 * 创建空字典使用 {}
 * 可以使用 dict() 创建字典 
 
-成员函数列表:
+成员函数列表:  
+
 函数名|说明
 ---|---
-clear()    |   清空
+clear() | 清空
 copy()     |   浅复制
 fromkeys(seq) |   以seq为键创建字典,值为默认值
 get(key,value) |   返回指定键的值,不存在则返回 value
