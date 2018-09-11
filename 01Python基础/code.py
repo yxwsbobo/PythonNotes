@@ -41,11 +41,21 @@ def ListTest():
     Student += ["Lin",21]
     print(Student)
 
+    Student = ("Name","Age","type")
+    print(Student)
+    Student = list(Student)
+    print(Student)
+
 def TupleTest():
     
    Student = ("Kin",31,"Tuple")
    Student += ("Lin",21)
 
+   print(Student)
+
+   Student =["Name","Age","language"]
+   print(Student)
+   Student = tuple(Student)
    print(Student)
 
 
@@ -66,4 +76,3 @@ def DictionTest():
     print(Maps.keys())
     print(Maps.values())
 
-DictionTest()

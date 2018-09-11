@@ -24,12 +24,16 @@
 
 ---
 > 代码块
+* Python使用相同缩进来标识一个代码块,或称为复合语句
+* 空语句使用 pass 表示
 ```python
-#Python使用相同缩进来标识一个代码块,或称为复合语句
+
 
 if True:
     print("hi")
     print("Julia")
+elif True:
+    pass
 else:
     print("hi")
     print("Kite")
@@ -120,24 +124,37 @@ ch = Path[-1] #>> ch == m
 ---
 > 列表 List
 * 使用[]定义一组元素,类型可以不相同
+* 使用函数 list(seq) 得到列表
+* 列表中元素的值可以改变
+* 列表支持嵌套
 * 支持下表访问,支持加法
 * 切片后返回新的列表
 * 支持部分操作append,pop
 ```python
     Student = ["Kin",31,"Python"]
     Student += ["Lin",21]
+    
+    Studen[0:3] = ["Name","Age","Language"]
+
 ```
 
 ---
 > 元组 Tuple
 * 使用()定义一组值不可变元素
+* 使用函数 tuple(seq) 得到元组
 * 可以与List互相转换
 * 速度比List快
 * 似乎是一个值不可变的List
+* 可以同String一样,使用 * 重复
+* Tuple 赋值时只有一个元素时需要在元素后跟 , #*好奇怪的设定,大概怕和别的类型混了吧*
 ```python
 
    Student = ("Kin",31,"Python")
    Student += ("Lin",21)
+
+   Studen = ("Kin",)
+
+   Studen = Studen *4
 
 ```
 
@@ -165,9 +182,24 @@ ch = Path[-1] #>> ch == m
 > 字典 Dictionaries
 * 键值对的集合
 * 键 无序不重复
+* 访问不存在的键会发生异常,相应的可以使用成员函数 .get(key,defaultValue) 代替,当键不存在是会返回 defaultValue
 * 初始化使用{Key:Value,...}
 * 创建空字典使用 {}
 * 可以使用 dict() 创建字典 
+
+成员函数列表:
+函数名|说明
+---|---
+.clear()    |   清空
+.copy()     |   浅复制
+.fromkeys(seq) |   以seq为键创建字典,值为默认值
+.get(key,value) |   返回指定键的值,不存在则返回 value
+.setdefault(key,value)  | 如果键不存在则创建键并赋值value (*如果存在说明都不做?*)
+.items()    |   返回一个List,元素为键值Tuple
+.keys()     |   返回键组成的List
+.values()   |   返回值组成的List
+.update(dict2)  |   使用dict2更新字典 (*是替换还是增加?*)
+
 ```python
 >>> dic = {}  # 创建空字典
 >>> tel = {'Jack':1557, 'Tom':1320, 'Rose':1886}
@@ -196,5 +228,18 @@ False
 
 >>> dict(sape=4139, guido=4127, jack=4098)
 {'jack': 4098, 'sape': 4139, 'guido': 4127}
+
+```
+
+---
+> 范围 range
+* 使用函数range(StartNum,EndNum,Step)用来自动生成序
+* 其中StartNum省略表示从0开始,Step省略表示步进为1,Step可为负
+* *似乎只能用来生成数字?*
+```python
+Numbers = range(5) #--> == range(0,5)
+
+for n in Numbers:
+    print(n,end=",")
 
 ```

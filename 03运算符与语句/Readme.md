@@ -62,3 +62,35 @@ is is not   |   身份运算符
 in not in   |   成员运算符
 not or and  |   逻辑运算符
 
+# 语句
+> if
+```python
+if condition:
+    Statement_Blok
+elif:
+    Statement_Blok
+else:
+    Statement_Blok
+
+```
+
+---
+## while 与 for 支持 else.当从判断条件退出循环时执行,**使用 break 跳出循环则不会执行**
+
+> while
+```python
+while condition:
+    Statement_Blok
+else:
+    Statement_Blok
+
+```
+
+---
+> for
+```python
+for var in sequence:
+    Statement_Blok
+else:   # if len(sequence) == 0
+    Statement_Blok
+```
