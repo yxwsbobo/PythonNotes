@@ -76,3 +76,30 @@ def DictionTest():
     print(Maps.keys())
     print(Maps.values())
 
+def iteratorTest():
+    tTuple = ("name",31)
+
+    it = iter(tTuple)
+
+    print(next(it))
+
+    it = iter(tTuple)
+
+    for i in it:
+        print(i,end=",")
+
+def zipTest():
+    questions = ['name', 'quest', 'favorite color']
+    answers = ['lancelot', 'the holy grail', 'blue']
+
+    for a,q in zip(answers,questions):
+        print(q,":",a)
+
+def refersedTest():
+    ls = list(range(6))
+    print(ls)
+
+    for n in reversed(ls):
+        print(n)
+
+refersedTest()

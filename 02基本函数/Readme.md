@@ -56,3 +56,7 @@ import keyword
 print(keyword.kwlist)
 
 ```
+
+# 模块
+## collections
+> 队列 deque

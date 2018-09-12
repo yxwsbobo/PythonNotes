@@ -91,6 +91,22 @@ else:
 ```python
 for var in sequence:
     Statement_Blok
-else:   # if len(sequence) == 0
+else:
     Statement_Blok
+```
+
+> 列表推倒式
+* 感觉像遍历序列对每个元素进行操作后得到一个新序列
+* 可以嵌套
+```python
+# 语法 
+# [var(use var do something as result) for var in seq if condition]
+
+ls = [2,3,4,5]
+
+newls = [x + 20 for x in ls if x>3]
+print(newls)
+
+for n in newls:
+    print("new Num:",n)
 ```

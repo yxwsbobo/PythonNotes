@@ -140,7 +140,7 @@ ch = Path[-1] #>> ch == m
 
 ---
 > 元组 Tuple
-* 使用()定义一组值不可变元素
+* 使用()定义一组值不可变元素 *(括号可省略)*
 * 使用函数 tuple(seq) 得到元组
 * 可以与List互相转换
 * 速度比List快
@@ -244,3 +244,53 @@ for n in Numbers:
     print(n,end=",")
 
 ```
+
+---
+> 迭代器 iter
+* 根据序列 sequence 创建迭代器,通过next()按顺序访问遍历元素
+* 迭代器也有部分序列属性?
+```python
+tTuple = ("name",31)
+
+it = iter(tTuple)
+
+print(next(it))
+
+it = iter(tTuple)
+
+for i in it:
+    print(i,end=",")
+
+```
+
+---
+> reversed 获得反向序列
+```python
+ls = list(range(6))
+print(ls)
+
+for n in reversed(ls):
+    print(n)
+
+```
+
+---
+> enumerate
+* 可以同时获得序列的位置和值
+```python
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i,v)
+```
+
+---
+> zip
+* 同时遍历两个或更多的序列，可以使用 zip() 组合：
+```python
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+
+for a,q in zip(answers,questions):
+    print(a,":",q)
+```
+
+>

@@ -12,4 +12,22 @@ def forTest():
     else:
         print("over")
 
-forTest()
+def declforTest():
+    ls = [1,2,3,4,5]
+
+    for i in [x + 20 for x in ls]:
+        print("get :",i)
+    
+    newls = [x + 20 for x in ls if x>2]
+    print(newls)
+
+    for n in newls:
+        print("new Num:",n)
+
+    print("-------")
+
+    newlns2 = [x + y for x in ls for y in newls]
+    print(newlns2)
+
+declforTest()
+
